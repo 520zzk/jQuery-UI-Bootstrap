@@ -1,0 +1,181 @@
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+		<!-- <script src="bootstrap-3.3.7-dist/js/jquery-3.4.0.js"></script> -->
+		<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+		<style type="text/css">
+			#box h3{
+				padding:5px 5px;
+				color:#049CDB;
+			}
+			#box h3 span{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="buttons">
+			<button class="ui-button-primary">primary</button>
+			<button class="ui-button-success">success</button>
+			<a href="#" class="button">ZZK</a>
+			<input type="submit" class="button" value="谁说的" >
+		</div>
+		<br>
+		<!-- <h2>bootstrap 结构</h2>
+		<div id="buttons">
+			<button class="btn btn-primary">primary</button>
+			<button class="btn btn-success">success</button>
+			<a href="#" class="btn"> zzk</a>
+			<input type="submit" name="" id="" class="btn" value="谁说的" />
+		</div> -->
+		<br><h2>单选按钮组</h2>
+		<div>
+			<h3>未激活的</h3>
+			<div id="dd">
+				<input type="radio" id="radio1" name="radio">
+				<label for="radio1">我是第一个</label>
+				<input type="radio" id="radio2" name="radio">
+				<label for="radio2">我是第二个</label>
+				<input type="radio" id="radio3" name="radio">
+				<label for="radio3">我是第三个</label>
+			</div>
+			<h3>已激活的</h3>
+			<div id="zzk">
+				<input type="radio" id="radio01" name="radio01">
+				<label for="radio01">我是第一个</label>
+				<input type="radio" id="radio02" name="radio01">
+				<label for="radio02">我是第二个</label>
+				<input type="radio" id="radio03" name="radio01">
+				<label for="radio03">我是第三个</label>
+			</div>
+			<h3>多个同时有,换ID 激活</h3>
+			<div id="xxx">
+				<input type="radio" id="radio001" name="radio02">
+				<label for="radio001">我是第一个</label>
+				<input type="radio" id="radio002" name="radio02">
+				<label for="radio002">我是第二个</label>
+				<input type="radio" id="radio003" name="radio02">
+				<label for="radio003">我是第三个</label>
+			</div>
+			<h2>多选按钮组</h2>
+			<div id="aaa">
+				<input type="checkbox" id="check1">
+				<label for="check1" >你</label>
+				<input type="checkbox" id="check2">
+				<label for="check2" >我</label>
+				<input type="checkbox" id="check3">
+				<label for="check3" >他</label>
+			</div>
+			<h3>多选按钮组，同上换ID名激活</h3>
+		</div>
+		<br><hr><h2>工具条</h2>
+		<div>
+			<div class="ui-toolbar">
+				<input type="checkbox" id="check">
+				<label for="check">复选框</label>
+				<span id="buttonset">
+					<input type="radio" id="ra001" name="repeat" checked="checked">
+					<label for="ra001">无</label>
+					<input type="radio" id="ra002" name="repeat" >
+					<label for="ra002">有</label>
+					<input type="radio" id="ra003" name="repeat" >
+					<label for="ra003">全部</label>
+				</span>
+			</div>
+			
+			
+		</div>
+		
+		<br><hr><h2>折叠</h2>
+		<div>
+			<div id="box">
+				<div>
+					<h3>标题1</h3>
+					<div>
+						<p>ddddddd</p>
+						<p>ddddddd</p>
+						<p>ddddddd</p>
+						<!-- 三个面板的高度按照撑起来最高的来 -->
+					</div>
+				</div>
+				<div>
+					<h3>标题2</h3>
+					<div>ddddddd</div>
+				</div>
+				<div>
+					<h3>标题3</h3>
+					<div>ddddddd</div>
+				</div>
+			</div>
+		</div>
+
+		<br><hr><h2>对话框</h2>
+		<div>
+			<div>
+				<button id="dialog_link" class="ui-button-primary">打开对话框</button>
+				<div id="dialog_menu" title="对话框标题处">
+					<div>
+						sdsfdlksajflkajflksajflkdsajlfk
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br><hr><h2>tab标签</h2>
+		<div>
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-a">Tab1</a></li>
+					<li><a href="#tabs-b">Tab2</a></li>
+					<li><a href="#tabs-c">Tab3</a></li>
+				</ul>
+				<div id="tabs-a">内容框11111111111</div>
+				<div id="tabs-b">内容框22222222222</div>
+				<div id="tabs-c">内容框33333333333</div>
+			</div>
+		</div>
+</body>
+	<script type="text/javascript">
+		$(function(){
+			let a = $('button');
+			console.log(a);
+			$("button").button();
+			$('.button').button();
+			
+			//激活按钮组
+			$('#zzk').buttonset();
+			$('#xxx').buttonset();
+			$('#aaa').buttonset();
+			//激活工具条
+			$('#check').button();
+			$('#buttonset').buttonset();
+			//激活折叠
+			$('#box').accordion({
+				header:'h3'
+			});
+			//激活对话框
+			/*jq版本太高会出现错误，出现没有函数的情况*/
+			console.log($('#dialog_menu'));
+			$('#dialog_menu').dialog({
+				autoOpen:false,
+				modal:true
+			});
+			$('#dialog_link').button().click(function(){
+				$('#dialog_menu').dialog('open');
+				return false;
+			});
+			
+			//Tabs 设计
+			$('#tabs').tabs();
+		})
+	</script>
+
+</html>
